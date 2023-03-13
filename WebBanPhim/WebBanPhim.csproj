@@ -168,6 +168,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Imgae\Cart_icon.png" />
+    <Content Include="Content\Imgae\facebook3.png" />
+    <Content Include="Content\Imgae\instagram3.png" />
+    <Content Include="Content\Imgae\linkedin3.png" />
+    <Content Include="Content\Imgae\Notify_icon.png" />
+    <Content Include="Content\Imgae\TINIMK %281%29.png" />
+    <Content Include="Content\Imgae\twitter3.png" />
+    <Content Include="Content\Imgae\User_icon.png" />
+    <Content Include="Content\Imgae\youtube3.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
