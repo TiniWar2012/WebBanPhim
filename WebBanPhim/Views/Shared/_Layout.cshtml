@@ -6,30 +6,119 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<body class="main">
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+                    </ul>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
-                </ul>
+        </div>*@
+    <div class="navbar">
+        <img src="~/Content/Imgae/TINIMK (1).png" alt="Logo" class="logo" />
+        <div class="search-bar">
+            <input class="txt-search" placeholder="Tìm kiếm" />
+            <div class="filter-search">
+                <select class="category-menu" id="category" name="category">
+                    <option>Danh mục</option>
+                </select>
+                <button class="btn-search">Tìm kiếm</button>
+            </div>
+        </div>
+        <div class="account-bar">
+            <div class="item-account-bar">
+                <img src="~/Content/Imgae/User-icon.png" />
+                <label>Cá nhân</label>
+            </div>
+            <div class="item-account-bar">
+                <img src="~/Content/Imgae/Notify-icon.png" />
+                <label>Tin nhắn</label>
+            </div>
+            <div class="item-account-bar">
+                <img src="~/Content/Imgae/Cart-icon.png" />
+                <label>Giỏ hàng</label>
             </div>
         </div>
     </div>
+
     <div class="container body-content">
+        <div class="filter-bar">
+            <div class="list-all-product">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+                <text>Tất cả</text>
+            </div>
+            <text class="item-filter">Sản phẩm nổi bật</text>
+            <text class="item-filter">Mới ra mắt</text>
+            <text class="item-filter">Bàn phím</text>
+            <text class="item-filter">Keycaps</text>
+            <text class="item-filter">Phụ kiện</text>
+            <text class="item-filter">Dịch vụ</text>
+            <select class="help-menu" id="help" name="help">
+                <option>Hỗ trợ</option>
+            </select>
+        </div>
         @RenderBody()
         <hr />
         <footer>
+            <div class="subcribe">
+                <text style="font-weight:bold">Đăng ký để nhận thông báo bản tin mới</text>
+                <text>
+                    Nhận tin tức mới về các ưu đãi sắp tới từ chúng tôi
+                </text>
+                <div class="input-subcribe">
+                    <input class="txt-subcribe" placeholder="Email" />
+                    <button class="btn-subcribe">Đăng ký</button>
+                </div>
+            </div>
+            <div style="display:flex;flex-direction:row;">
+                <div class="social">
+                    <span style="display:flex; flex-direction:row; align-items:center;">
+                        <img src="~/Content/Imgae/TINIMK (1).png" alt="Logo" class="logo" />
+                        <text style="font-size:30px; font-weight:bold; margin-left:20px;">TINIMK</text>
+                    </span>
+                    <text>Theo dõi chúng tôi qua các nền tảng xã hội để cập nhật các thông tin nhanh nhất và nhận nhiều ưu đãi hấp dẫn</text>
+                    <div class="link-social">
+                        <img src="~/Content/Imgae/facebook3.png" />
+                        <img src="~/Content/Imgae/instagram3.png" />
+                        <img src="~/Content/Imgae/youtube3.png" />
+                    </div>
+                </div>
+                <div style="display:flex;flex-direction:column; flex:1;">
+                    <text style="font-weight:bold;">Về chúng tôi</text>
+                    <text>Về chúng tôi</text>
+                    <text>Cửa hàng</text>
+                    <text>Danh mục sản phẩm</text>
+                    <text>Blogs</text>
+                </div>
+                <div style="display:flex;flex-direction:column; flex:1;">
+                    <text style="font-weight:bold;">Thông tin</text>
+                    <text>Trợ giúp</text>
+                    <text>Chính sách hoàn tiền</text>
+                    <text>Giao hàng</text>
+                    <text>Thông tin liên hệ</text>
+                </div>                
+                <div style="display:flex;flex-direction:column; flex:1;">
+                    <text style="font-weight:bold;">Tài khoản</text>
+                    <text>Đăng nhập</text>
+                    <text>Đăng ký</text>
+                    <text>Đơn hàng</text>
+                </div>
+            </div>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
@@ -39,3 +128,154 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+<style>
+    html {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        padding-left: 50px;
+        padding-right: 50px;
+        width: 100%;
+    }
+
+    .logo {
+        height: 82px;
+        max-width: 82px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0.1;
+    }
+
+    .search-bar {
+        flex: 0.4;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        border-style: groove;
+        border-width: 2px;
+        border-color: #0D6EFD;
+        height: 40px;
+        max-width: 665px;
+        border-radius: 10px;
+        align-items: center;
+    }
+
+    .filter-search {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .txt-search {
+        width: 421px;
+        border: hidden;
+        padding-left: 10px;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    .category-menu {
+        width: 145px;
+        height: 40px;
+        border-style: groove;
+        border-width: 2px;
+        border-color: #0D6EFD;
+        outline: none;
+    }
+
+    .btn-search {
+        background-color: #0D6EFD;
+        border: hidden;
+        color: white;
+        height: 40px;
+        width: 100px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px
+    }
+
+    .account-bar {
+        display: flex;
+        flex-direction: row;
+        height:100%;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        padding-left: 200px;
+        flex: 0.2;
+    }
+    .item-account-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+        color: #8B96A5;
+    }
+
+    .list-all-product {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .filter-bar {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 56px;
+        align-items: center;
+    }
+
+    .item-filter {
+        margin-left: 40px;
+    }
+
+    .help-menu {
+        outline: none;
+        border: none;
+        margin-left: 40px;
+        align-items: center;
+    }
+    .social {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+    }
+
+    .subcribe {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .input-subcribe{
+
+    }
+    .txt-subcribe {
+        border: groove;
+        border-color:#8B96A5;
+        height: 40px;
+        width: 274px;
+        border-radius:10px;
+        outline:none;
+        border-width:1px;
+    }
+    .btn-subcribe {
+        height: 40px;
+        padding: 0px 16px;
+        position: absolute;
+        background: linear-gradient(180deg, #127FFF 0%, #0067FF 100%);
+        border-radius: 6px;
+        border:none;
+        color:white;
+    }
+</style>

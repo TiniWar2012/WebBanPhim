@@ -1,0 +1,21 @@
+1) Setup
+	- Cài thư viện Json-Server: npm install -g json-server
+	- Kiểm tra cài thành công thư viện: json-server --v
+	- Thành công trả về số phiên bản: vd: 0.17.2
+2) Run
+	- Mở thư mục chứ file ở đây là thư mục API
+	- Sử dụng IDE, cmd để chạy thư viện
+	- VD ở đây dùng Visual Studio Code
+	- Mở terminal
+	- Chạy lệnh: json-server --watch A.json -- port B
+		Với A là tên file json
+		B là tên port( trong dự án dùng chung 1 port để đảm bảo không bị lỗi config code)
+	- Câu lệnh trong dự án:
+			json-server --watch webapi.json -- port 8179
+
+Link api: localhost:8179/(Tên object)
+vd: localhost:8179/users 
+
+Tên các Object có trong dự án:
+	users
+	products
